@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Name Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #nameDisplay {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Random Name Generator</h1>
+<div id="nameDisplay"></div>
+<button onclick="generateRandomNames()">Generate Names</button>
+
+<script>
+function generateRandomNames() {
+  // Array of names
+  var names = [
+    "Suraj",
+    "Harsh",
+    "Shashank",
+    "Mayank",
+    "Diwin",
+    "Ankur",
+    "Maurya",
+    "Vikas",
+    "Adarsh",
+    "Bhagwa",
+    "Himansh",
+    "Jaynish",
+    "Abhijeet"
+  ];
+
+  // Shuffle the array
+  names.sort(() => Math.random() - 0.5);
+
+  // Display three random names
+  var nameDisplay = document.getElementById("nameDisplay");
+  nameDisplay.innerHTML = "";
+  for (var i = 0; i < 2; i++) {
+    var name = names[i];
+    var nameElement = document.createElement("p");
+    nameElement.textContent = name;
+    nameDisplay.appendChild(nameElement);
+  }
+}
+</script>
+
+</body>
+</html>
+   
+
+
